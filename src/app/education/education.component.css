@@ -1,0 +1,77 @@
+:host {
+    display: block;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+section {
+    margin-top: 2rem;
+}
+h1 {
+    padding: 1rem 0;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--red);
+    /* outline: 1px solid white; */
+    font-family: 'Roboto Condensed', sans-serif;
+    text-shadow: 10px 8px 10px var(--black);
+
+}
+section h2 {
+    color: var(--red);
+}
+
+section h4 {
+    color: var(--gray-light);
+}
+
+/* PC */
+:host.pc section {
+    width: 600px;
+    position: relative;
+    margin-left: 5rem;
+    display: grid;
+    gap: 0 1.5rem;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+:host.pc section h4:nth-child(4) {
+    grid-row: 1/4;
+    margin-top: 0%; 
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid white;
+}
+:host.pc ul li:has(ul) {
+    width: max-content;
+    position: relative;
+    margin-left: 5rem;
+}
+
+:host.pc ul li:has(ul)::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -60px;
+    top: 5px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: var(--red);
+}
+
+:host.pc ul li:has(ul)::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 130%;
+    left: -50px;
+    top: 5%;
+    z-index: 1;
+    background-color: var(--red-light);
+}
