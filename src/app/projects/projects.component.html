@@ -11,6 +11,10 @@
 
         <ul *ngFor="let desc of project.description">
             <li>{{desc}}</li>
-        </ul>
+            
+        </ul><br>
+        <button class="button-24" role="button" (click)="redirectToGitHub(project.link)"> See More</button>
     </section>
 </div>
+<!-- HTML !-->
+

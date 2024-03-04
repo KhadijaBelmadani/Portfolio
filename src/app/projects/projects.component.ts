@@ -7,6 +7,11 @@ import { Project } from '../models';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
+  redirectToGitHub(link: string): void {
+    if (link) {
+      window.open(link, '_blank');
+    }
+  }
   projects: Project[] = [
     {
       title: 'Streaming Platforme (In Progress)',
@@ -14,6 +19,7 @@ export class ProjectsComponent {
       description: [
         'Streaming Platform aims to redefine the streaming experience, providing users with a feature-rich, secure, and interactive environment. Whether its binge-watching favorite videos, discovering new content, or participating in live events, this platform offers a comprehensive streaming solution at the intersection of powerful backend technologies and a dynamic frontend interface.',
       ],
+      link:'https://github.com/KhadijaBelmadani/StreamingApp_SpringBoot_Angular'
     },
     {
       title: 'Sales management Web Application',
@@ -21,6 +27,7 @@ export class ProjectsComponent {
       description: [
         'This web application is a Sales Management system built using ASP.NET and .NET Framework. It provides functionality for managing sales, customers and products.',
       ],
+      link:'https://github.com/KhadijaBelmadani/Sales_Management_.Net'
     },
     {
       title: 'JAVA QCM Application',
@@ -29,6 +36,7 @@ export class ProjectsComponent {
         'The Java QCM application is a robust and user-friendly platform designed for creating and taking Multiple Choice Question (MCQ) quizzes. Developed using Java, this application seamlessly combines functionality with an intuitive user interface, catering to both quiz creators and participants.',
        
       ],
+      link:'https://github.com/KhadijaBelmadani/Java_QCM_Application'
     },
     {
       title: 'Movies Website',
@@ -36,6 +44,7 @@ export class ProjectsComponent {
       description: [
         'The website taps into TMDBs extensive database, offering a vast collection of movies and TV shows. Users can explore details about their favorite films, actors, genres, and more.',
       ],
+      link:'https://github.com/KhadijaBelmadani/Movies_Website_Angular'
     },
     {
       title: 'News Website',
@@ -43,6 +52,7 @@ export class ProjectsComponent {
       description: [
         'Access the latest news articles, headlines, and breaking news from a wide range of reputable sources, all powered by the News API.',
       ],
+      link:'https://github.com/KhadijaBelmadani/News-Website-Angular'
     },
   ];
 }

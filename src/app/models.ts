@@ -19,4 +19,5 @@ export interface WorkExperience {
     title: string;
     technologies: string;
     description: string[];
+    link:string,
   }
